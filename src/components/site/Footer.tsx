@@ -1,12 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Phone, MapPin, Clock } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 export function Footer() {
   return (
     <footer className="mt-20 border-t border-border bg-charcoal text-cream">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3">
         <div>
-          <div className="font-display text-2xl text-spicy">SAMYANG G</div>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Samyang G logo" className="h-12 w-12 rounded-full object-cover ring-2 ring-spicy/50" />
+            <div className="font-display text-2xl text-spicy">SAMYANG G</div>
+          </div>
           <p className="mt-3 text-sm text-cream/70">
             Spicy noods with cheese & love. Served 24/7 in Bacoor, Cavite.
           </p>
