@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const links = [
   { to: "/", label: "Home" },
@@ -15,10 +16,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-charcoal text-spicy font-display text-lg">
-            SG
-          </span>
+        <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+          <img src={logo} alt="Samyang G logo" className="h-10 w-10 rounded-full object-cover ring-2 ring-spicy/40" />
           <span className="font-display text-xl tracking-wide">SAMYANG G</span>
         </Link>
 
